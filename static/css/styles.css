@@ -2127,6 +2127,21 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+@media (min-width: 500px){
+  .img-logo-big{
+    height: 155px;
+    width: 491px;
+  }
+}
+
+@media (max-width: 499px){
+  .img-logo-smart{
+    height: 70px;
+    width: 222px;
+  }
+}
+
 .form-label {
   margin-bottom: 0.5rem;
 }
@@ -7455,6 +7470,27 @@ textarea.form-control-lg {
 .bg-gradient {
   background-image: var(--bs-gradient) !important;
 }
+
+.bg-azul-logo{
+  background: #03A8FF!important;
+}
+
+.bg-rosa-logo{
+  background: #FF2A90!important;
+}
+
+.text-rosa{
+  color: #FF2A90!important;
+}
+
+.text-normal-muted{
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6c757d !important;
+}
+
 
 .user-select-all {
   -webkit-user-select: all !important;
