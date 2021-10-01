@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
+        <title>Adoleser</title>
         <link rel="icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -15,6 +15,65 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+        <style>
+            /* Style The Dropdown Button */
+            .dropbtn1 {
+                background-color: transparent;
+                font-weight: 800;
+                letter-spacing: 0.05rem;
+                text-transform: uppercase;
+                color: white;
+                padding-bottom: 4px;
+                padding-top: 5px;
+                /* font-size: 16px; */
+                border: none;
+                cursor: pointer;
+            }
+            
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown1 {
+              position: relative;
+              display: inline-block;
+            }
+            
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content1 {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+            
+            /* Links inside the dropdown */
+            .dropdown-content1 a {
+              color: black;
+              padding: 6px 14px;
+              text-decoration: none;
+              display: block;
+              font-size: 13px;
+              font-weight: 500;
+            }
+            
+            /* Change color of dropdown links on hover */
+            .dropdown-content1 a:hover {background-color: #f1f1f1}
+            
+            /* Show the dropdown menu on hover */
+            .dropdown1:hover .dropdown-content1 {
+              display: block;
+            }
+            
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown1:hover .dropbtn1 {
+              /* background-color: #3e8e41; */
+              /* box-shadow: 1px solid red; */
+              border: 1px solid transparent;
+              /* border-radius: 8px; */
+            }
+        </style>
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -31,11 +90,26 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#about">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#experience">CONTRACEPÇÃO</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#education">MITO OU VERDADE</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#skills">Contraceptivos</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#skills">Contraceptivos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#skills">MÉTODOS COMPORTAMENTAIS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#skills">MÉTODOS DE BARREIRA</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#skills">MÉTODOS HORMONAIS</a></li> --> 
+                    <li class="nav-item"><a class="js-scroll-trigger text-white">
+                        <div class="dropdown1">
+                            <button class="dropbtn1">Contraceptivos</button>
+                            <div class="dropdown-content1">
+                              <a href="#COMPORTAMENTAIS">MÉTODOS COMPORTAMENTAIS</a>
+                              <a href="#BARREIRA">MÉTODOS DE BARREIRA</a>
+                              <a href="#HORMONAIS">MÉTODOS HORMONAIS</a>
+                            </div>
+                        </div>
+                    </a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#interests">REFERÊNCIAS</a></li>
                 </ul>
             </div>
         </nav>
+
+
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
@@ -45,11 +119,11 @@
                         <img src="{% static 'assets/img/logo.jpeg' %}" class="img-logo-big img-logo-smart">
                     </h1>
                     <h1>
-                        <span class="">“bora” se prevenir?</span>
+                        <span class="">bora se prevenir?</span>
                     </h1>
                     <div class="subheading mb-5">
-                        [INFO] · [INFO] · [CONTATO] ·
-                        <a href="mailto:name@email.com" class="text-rosa">name@email.com</a>
+                        <!-- [INFO] · [INFO] · -->
+                        <a href="mailto:joana0.moura@gmail.com" class="text-rosa">joana0.moura@gmail.com</a>
                     </div>
                     <!-- <div class="social-icons">
                         <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
@@ -80,112 +154,234 @@
                 <div class="resume-section-content">
                     <h2 class="mb-5">Mito ou Verdade</h2>
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                O coito interrompido (método onde o pênis é retirado da vagina antes da ejaculação) apresenta pouca chance de apresentar falha (MITO – muito pelo contrário, gente! Esse método é muito arriscado, certo? É grande a possibilidade de falha, até porque o líquido que sai antes da ejaculação pode conter espermatozóides);
+                            <p >
+                                O coito interrompido (método onde o pênis é retirado da vagina antes da ejaculação) apresenta pouca chance de apresentar falha;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v1">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m1">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp1">
+                        <p class="texto-negrito">
+                            MITO – muito pelo contrário, gente! Esse método é muito arriscado, certo? É grande a possibilidade de falha, até porque o líquido que sai antes da ejaculação pode conter espermatozóides
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                A “pílula do dia seguinte” pode ser utilizada com muita frequência, pois não tem uma dose hormonal grande (MITO – deve ser utilizada APENAS em situações de EMERGÊNCIA);
+                            <p>
+                                A “pílula do dia seguinte” pode ser utilizada com muita frequência, pois não tem uma dose hormonal grande;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v2">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m2">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp2">
+                        <p class="texto-negrito">
+                            MITO – deve ser utilizada APENAS em situações de EMERGÊNCIA
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                A participação ativa do adolescente na escolha não é essencial à adesão ao método contraceptivo e continuidade do uso (MITO – é essencial que você, adolescente, participe na escolha do método que irá utilizar);</p>
+                            <p>
+                                A participação ativa do adolescente na escolha não é essencial à adesão ao método contraceptivo e continuidade do uso;</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v3">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m3">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp3">
+                        <p class="texto-negrito">
+                            MITO – é essencial que você, adolescente, participe na escolha do método que irá utilizar
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                A abstinência sexual (que é quando a pessoa escolhe não praticar sexo) é considerada um método contraceptivo e sua eficácia é de 100% contra gravidez indesejada e IST’s (Infecções Sexualmente Transmissíveis), como sífilis, HPV, gonorreia, etc. (VERDADE);
+                            <p>
+                                A abstinência sexual (que é quando a pessoa escolhe não praticar sexo) é considerada um método contraceptivo e sua eficácia é de 100% contra gravidez indesejada e IST’s (Infecções Sexualmente Transmissíveis), como sífilis, HPV, gonorreia, etc;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v4">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m4">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp4">
+                        <p class="texto-negrito">
+                            VERDADE
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                O preservativo masculino é 100% eficaz. (MITO – nenhum método, após a iniciação sexual, é 100% eficaz);
+                            <p>
+                                O preservativo masculino é 100% eficaz;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v5">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m5">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp5">
+                        <p class="texto-negrito">
+                            MITO – nenhum método, após a iniciação sexual, é 100% eficaz
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                É aconselhável que o adolescente escolha métodos irreversíveis (aqueles definitivos, que não tem como a pessoa ter filhos após utilizá-los, como laqueadura ou vasectomia). (MITO);
+                            <p>
+                                É aconselhável que o adolescente escolha métodos irreversíveis (aqueles definitivos, que não tem como a pessoa ter filhos após utilizá-los, como laqueadura ou vasectomia);
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v6">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m6">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp6">
+                        <p class="texto-negrito">
+                            MITO
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                O preservativo (masculino ou feminino) é o único método que, sozinho, confere dupla proteção. (VERDADE – o preservativo protege tanto contra a gravidez indesejada, quanto contra IST’s);
+                            <p>
+                                O preservativo (masculino ou feminino) é o único método que, sozinho, confere dupla proteção;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v7">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m7">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp7">
+                        <p class="texto-negrito">
+                            VERDADE – o preservativo protege tanto contra a gravidez indesejada, quanto contra IST’s
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                Ao se utilizar DIU (Dispositivo Intrauterino) e anticoncepcional oral, pode-se considerar que o adolescente está fazendo uso da dupla proteção. (MITO – esses dois métodos protegem apenas contra gravidez. O único método que previne IST’s é o preservativo masculino ou feminino);
+                            <p>
+                                Ao se utilizar DIU (Dispositivo Intrauterino) e anticoncepcional oral, pode-se considerar que o adolescente está fazendo uso da dupla proteção;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v8">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m8">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp8">
+                        <p class="texto-negrito">
+                            MITO – esses dois métodos protegem apenas contra gravidez. O único método que previne IST’s é o preservativo masculino ou feminino
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                A “pílula do dia seguinte” é um método utilizado para evitar uma gravidez não planejada após uma relação sexual sem proteção e deve ser usada em até 120 horas (5 dias), sendo que sua eficácia é maior se ingerida em até 72 horas (3 dias), ou seja, quanto antes melhor. (VERDADE);
+                            <p>
+                                A “pílula do dia seguinte” é um método utilizado para evitar uma gravidez não planejada após uma relação sexual sem proteção e deve ser usada em até 120 horas (5 dias), sendo que sua eficácia é maior se ingerida em até 72 horas (3 dias), ou seja, quanto antes melhor;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v9">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m9">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp9">
+                        <p class="texto-negrito">
+                            VERDADE
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
+                            <p>
                                 Os contraceptivos orais combinados afetam a fertilidade
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v10">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m10">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp10">
+                        <p class="texto-negrito">
+                            MITO
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                O DIU só pode ser utilizado por quem já teve filhos (MITO);
+                            <p>
+                                O DIU só pode ser utilizado por quem já teve filhos;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-danger fw-bold">MITO</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v11">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m11">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp11">
+                        <p class="texto-negrito">
+                            MITO
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <p style="padding-right: 30px;">
-                                Adolescentes podem necessitar de contracepção antes da menarca (primeira menstruação), em decorrência do início de vida sexual precoce, pois pode ocorrer gravidez nesse período. (VERDADE).
+                            <p>
+                                Adolescentes podem necessitar de contracepção antes da menarca (primeira menstruação), em decorrência do início de vida sexual precoce, pois pode ocorrer gravidez nesse período;
                             </p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div>
+                        <!-- <div class="flex-shrink-0"><span class="text-success fw-bold">VERDADE</span></div> -->
                     </div>
+                    <div class="row mb-5" style="display: flex;align-items: center;justify-content: center;">
+                        <button type="button" class="btn btn-success" style="width: 110px;margin-right: 6px;" id="v12">VERDADE</button>
+                        <button type="button" class="btn btn-danger" style="width: 110px;" id="m12">MITO</button>
+                    </div>
+                    <div class="mb-5 remover" id="resp12">
+                        <p class="texto-negrito">
+                            VERDADE
+                        </p>
+                    </div>
+                    <hr class="h-3px">
 
 
                 </div>
@@ -200,10 +396,10 @@
                     </p>
 
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="COMPORTAMENTAIS">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos comportamentais</h3>
-                            <div class="subheading mb-3">Tabelinha (Método de Ogino – Knaus ou do calendário)</div>
+                            <div class="subheading mb-3" id="TABELINHA">Tabelinha (Método de Ogino – Knaus ou do calendário)</div>
                             <p>Provavelmente você já deve ter ouvido esse nome “Tabelinha”, não é mesmo? Mas, afinal, o que é isso?</p>
                             <p>
                                 É um método contraceptivo que leva em conta a provável época da ovulação, o período de fertilidade do óvulo (24-48 horas) e o tempo médio de vida dos espermatozoides no trato genital feminino (72 horas).
@@ -307,7 +503,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos comportamentais</h3>
-                            <div class="subheading mb-3">Método de Billings ou do muco cervical</div>
+                            <div class="subheading mb-3" id="Billings">Método de Billings ou do muco cervical</div>
                             <ul class="fa-ul mb-0">
                                 <li>
                                     <span class="fa-li"><i class="fas fa-check"></i></span>
@@ -330,7 +526,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos comportamentais</h3>
-                            <div class="subheading mb-3">Método da temperatura basal</div>
+                            <div class="subheading mb-3" id="basal">Método da temperatura basal</div>
                             <ul class="fa-ul mb-0">
                                 <li>
                                     <span class="fa-li"><i class="fas fa-check"></i></span>
@@ -354,10 +550,10 @@
                     </div>
 
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="BARREIRA">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos de barreira</h3>
-                            <div class="subheading mb-3">Preservativo masculino (camisinha)</div>
+                            <div class="subheading mb-3" id="camisinha">Preservativo masculino (camisinha)</div>
 
                             <figure class="figure" class="mb-3">
                                 <img src="{% static 'assets/img/image3.jpg' %}" class="figure-img img-fluid rounded" alt="..." style="width: 293px;height: 195px;">
@@ -407,7 +603,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-2">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos de barreira</h3>
-                            <div class="subheading mb-3">Preservativo feminino (camisinha feminina)</div>
+                            <div class="subheading mb-3" id="camisinha-feminina">Preservativo feminino (camisinha feminina)</div>
 
                             <ul class="fa-ul mb-0">
                                 <li>
@@ -466,7 +662,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos de barreira</h3>
-                            <div class="subheading mb-3">DIU (Dispositivo intrauterino)</div>
+                            <div class="subheading mb-3" id="diu">DIU (Dispositivo intrauterino)</div>
 
                             <figure class="figure" class="mb-3">
                                 <img src="{% static 'assets/img/image4.jpg' %}" class="figure-img img-fluid rounded" alt="..." style="width: 293px;height: 195px;">
@@ -537,7 +733,7 @@
                     </div>
 
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="HORMONAIS">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos hormonais</h3>
                             <div class="subheading mb-3"></div>
@@ -557,7 +753,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos hormonais</h3>
-                            <div class="subheading mb-3">Anticoncepcional oral combinado</div>
+                            <div class="subheading mb-3" id="oral">Anticoncepcional oral combinado</div>
 
                             <ul class="fa-ul mb-0">
                                 <li>
@@ -682,7 +878,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos hormonais</h3>
-                            <div class="subheading mb-3">Minipílula</div>
+                            <div class="subheading mb-3" id="Minipílula">Minipílula</div>
 
                             <ul class="fa-ul mb-0">
                                 <li>
@@ -720,7 +916,7 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Métodos hormonais</h3>
-                            <div class="subheading mb-3">Anticoncepção de emergência (Pílula do dia seguinte)</div>
+                            <div class="subheading mb-3" id="pilula">Anticoncepção de emergência (Pílula do dia seguinte)</div>
 
                             <ul class="fa-ul mb-0">
                                 <li>
@@ -777,49 +973,63 @@
                     <h2 class="mb-5">REFERÊNCIAS</h2>
                     <ul class="fa-ul mb-0">
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             BOROVAC-PINHEIRO, Anderson et al. Contracepção em adolescentes antes e depois do parto: escolhas e desafios para o futuro. Rev. Bras. Ginecol. Obstet. [online]. 2016, vol.38, n.11, pp.545-551. ISSN 1806-9339.  http://dx.doi.org/10.1055/s-0036-1593971.
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             Brasil. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Ações Programáticas e Estratégicas. Proteger e cuidar da saúde de adolescentes na atenção básica / Ministério da Saúde, Secretaria de Atenção à Saúde, Departamento de Ações Programáticas e Estratégicas. – 2. ed. – Brasília: Ministério da Saúde, 2018;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             Brasil. Ministério da Saúde. Secretaria de Atenção à Saúde. Departamento de Ações Programáticas Estratégicas. Saúde do adolescente: competências e habilidades / Ministério da Saúde, Secretaria de Atenção à Saúde, Departamento de Ações Programáticas Estratégicas. – Brasília: Editora do Ministério da Saúde, 2008;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             DE ANDRADE, Julio Rezende et al. A história obstétrica de gestantes com trombofilias hereditárias. Clinical & Biomedical Research , [Sl], v. 39, n. 2 de agosto 2019. ISSN 2357-9730. Disponível em: < https://www.seer.ufrgs.br/hcpa/article/view/86858 >. Data de acesso: 19 de maio de 2021;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             EFW van Vlijmen, NJGM Veeger , S. Middeldorp , K. Hamulyák , MH Prins, HC Kluin-Nelemans , K. Meijer. O impacto de uma história familiar trombótica masculina ou feminina no aconselhamento contraceptivo: um estudo de coorte. Journal of Thrombosis and Haemostasis. 2016;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             FESBRASGO. Anticoncepção para adolescentes. São Paulo: Connexomm, 2017;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             GONZÁLEZ-QUIÑONES et al. Mudanças na prevalência de conhecimentos, atitudes e práticas de sexualidade em estudantes adolescentes, Bogotá, 2011-2015. Revista salud publica 21 (2) março-abril 2019. Disponível em: https://doi.org/10.15446/rsap.V21n2.73371;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             Goshtasebi A, Subotic Brajic T, Scholes D, Beres Lederer Goldberg T, Berenson A, Prior JC. Adolescent use of combined hormonal contraception and peak bone mineral density accrual: A meta-analysis of international prospective controlled studies. Clin Endocrinol (Oxf). 2019 Apr;90(4):517-524. doi: 10.1111/cen.13932. Epub 2019 Feb 10. PMID: 30614555; PMCID: PMC6850432;
+                            <p></p>
                         </li>
                         <li>
-                            <span class="fa-li"><i class="fas fa-asterisk"></i></span>
+                            <!-- <span class="fa-li"><i class="fas fa-asterisk"></i></span> -->
                             Leon-Larios, Fatima & Gomez-Baya, Diego. (2018). DISEÑO Y VALIDACIÓN DE UN CUESTIONARIO SOBRE CONOCIMIENTOS DE SEXUALIDAD RESPONSABLE EN JÓVENES. Revista Española de Salud Pública.
+                            <p></p>
                         </li>
                     </ul>
                 </div>
             </section>
             <hr class="m-0" />
         </div>
+        <!-- JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>        
+        <!-- POPPER -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'js/index.js' %}"></script>
     </body>
 </html>
