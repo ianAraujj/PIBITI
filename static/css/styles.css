@@ -7489,7 +7489,7 @@ textarea.form-control-lg {
 }
 
 .bg-azul-logo{
-  background: #03A8FF!important;
+  background: #c688a5!important;
 }
 
 .bg-rosa-logo{
@@ -7506,6 +7506,10 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #6c757d !important;
+}
+
+.font-label-menu-lateral{
+  font-family: Schoolbell;
 }
 
 

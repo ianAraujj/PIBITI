@@ -1,4 +1,8 @@
+var respostas_certas = 0;
+var perguntas_respondidas = 0;
+
 function conferirResposta(questionario){
+    perguntas_respondidas += 1;
     if (questionario == 1){
         $('#v1').addClass("remover");
     }
@@ -44,11 +48,29 @@ function conferirResposta(questionario){
     }
 
     if (questionario == 12){
-        $('#m12').addClass("remover");
+        $('#v12').addClass("remover");
+    }
+
+    if (questionario == 13){
+        $('#v13').addClass("remover");
     }
 
     $(`#resp${questionario}`).removeClass("remover");
+
+    if (perguntas_respondidas == 13){
+        verificarCertificado();
+    }
     
+}
+
+function verificarCertificado(){
+    if ((respostas_certas / 13) >= 0.8){
+        // Emitir Certificado
+        $('#certificado').removeClass("remover");
+        $(window).scrollTop($('#certificado').offset().top);
+    }else{
+        // Não faz nada
+    }
 }
 
 
@@ -58,6 +80,7 @@ $( document ).ready(function() {
         conferirResposta(1);
     });
     $("#m1").click(function(){
+        respostas_certas += 1;
         conferirResposta(1);
     });
 
@@ -65,6 +88,7 @@ $( document ).ready(function() {
         conferirResposta(2);
     });
     $("#m2").click(function(){
+        respostas_certas += 1;
         conferirResposta(2);
     });
 
@@ -72,10 +96,12 @@ $( document ).ready(function() {
         conferirResposta(3);
     });
     $("#m3").click(function(){
+        respostas_certas += 1;
         conferirResposta(3);
     });
 
     $("#v4").click(function(){
+        respostas_certas += 1;
         conferirResposta(4);
     });
     $("#m4").click(function(){
@@ -86,6 +112,7 @@ $( document ).ready(function() {
         conferirResposta(5);
     });
     $("#m5").click(function(){
+        respostas_certas += 1;
         conferirResposta(5);
     });
 
@@ -93,10 +120,12 @@ $( document ).ready(function() {
         conferirResposta(6);
     });
     $("#m6").click(function(){
+        respostas_certas += 1;
         conferirResposta(6);
     });
 
     $("#v7").click(function(){
+        respostas_certas += 1;
         conferirResposta(7);
     });
     $("#m7").click(function(){
@@ -107,10 +136,12 @@ $( document ).ready(function() {
         conferirResposta(8);
     });
     $("#m8").click(function(){
+        respostas_certas += 1;
         conferirResposta(8);
     });
 
     $("#v9").click(function(){
+        respostas_certas += 1;
         conferirResposta(9);
     });
     $("#m9").click(function(){
@@ -121,6 +152,7 @@ $( document ).ready(function() {
         conferirResposta(10);
     });
     $("#m10").click(function(){
+        respostas_certas += 1;
         conferirResposta(10);
     });
 
@@ -128,6 +160,7 @@ $( document ).ready(function() {
         conferirResposta(11);
     });
     $("#m11").click(function(){
+        respostas_certas += 1;
         conferirResposta(11);
     });
 
@@ -135,7 +168,17 @@ $( document ).ready(function() {
         conferirResposta(12);
     });
     $("#m12").click(function(){
+        respostas_certas += 1;
         conferirResposta(12);
     });
+
+    $("#v13").click(function(){
+        conferirResposta(13);
+    });
+    $("#m13").click(function(){
+        respostas_certas += 1;
+        conferirResposta(13);
+    });
+
 
 });
