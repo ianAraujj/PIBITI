@@ -69,7 +69,8 @@ function verificarCertificado(){
         $('#certificado').removeClass("remover");
         $(window).scrollTop($('#certificado').offset().top);
     }else{
-        // Não faz nada
+        $('#certificado-2').removeClass("remover");
+        $(window).scrollTop($('#certificado-2').offset().top);
     }
 }
 
